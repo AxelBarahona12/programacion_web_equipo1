@@ -1,0 +1,28 @@
+/* Estilos para el menú */
+header {
+    background-color: #d1d1d1;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Estilos para el efecto hover en los enlaces */
+nav a:hover {
+    color: #ff0000; /* Cambia el color al pasar el ratón */
+}
