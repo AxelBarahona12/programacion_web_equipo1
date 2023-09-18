@@ -1,0 +1,25 @@
+#tempaltemo_footer {
+    ul.footer-icons {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 24px;
+      }
+  
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  
+    .bg-black {
+      background-color: #000;
+    }
+  
+    .text-light {
+      color: #fff;
+    }
+  }
