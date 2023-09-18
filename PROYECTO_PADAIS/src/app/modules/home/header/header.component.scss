@@ -1,0 +1,35 @@
+.navbar-blue {
+    background-color: #000; 
+    color: #fff; 
+  }
+  
+  .nav-link {
+    color: #fff !important; 
+    transition: color 0.3s; 
+  }
+  
+ 
+  .btn-outline-warning {
+    border-color: #fff; 
+    color: #fff; 
+    transition: background-color 0.3s, color 0.3s; 
+  }
+  
+  .btn-outline-warning:hover {
+    background-color: #ffc107; 
+    color: #000 !important; 
+  }
+  
+  .nav-item {
+    margin-right: 20px; 
+  }
+  
+  .nav-item.active .nav-link {
+    font-weight: bold; 
+    color: #ffc107 !important; 
+  }
+  
+  .nav-item .nav-link:hover {
+    color: #ffc107 !important; 
+  }
+  
