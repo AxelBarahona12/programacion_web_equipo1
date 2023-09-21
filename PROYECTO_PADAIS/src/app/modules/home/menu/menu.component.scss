@@ -1,0 +1,51 @@
+/* Estilos para los productos */
+.container {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.product {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    display: inline-block;
+    width: 30%;
+}
+
+.product img {
+    max-width: 50%;
+    height: 20%;
+}
+
+.product h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.product p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.product .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #03a9f4;
+}
+
+.product button {
+    background: #03a9f4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.product button:hover {
+    background: #0288d1;
+}

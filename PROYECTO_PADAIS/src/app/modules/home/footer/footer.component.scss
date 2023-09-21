@@ -1,0 +1,27 @@
+#tempaltemo_footer {
+  ul.footer-icons {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Hacer que los íconos estén en línea y centrados */
+    justify-content: center; /* Centrar los íconos horizontalmente */
+
+    li {
+      margin-right: 20px; /* Espacio entre los íconos */
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      border: none; /* Eliminar cualquier borde */
+      border-radius: 0; /* Eliminar cualquier radio de borde (círculos) */
+    }
+  }
+
+  .bg-black {
+    background-color: #000;
+  }
+
+  .text-light {
+    color: #fff;
+  }
+}
