@@ -1,6 +1,9 @@
 <br/>
 <br/>
-
+<br/>
+<br/>
+<br/>
+<br/>
 <!-------------------aqui es codigo del carrusel--------------->
 <div id="template-mo-zay-hero-carousel" class="carousel slide" data-bs-ride="carousel">
     <ol class="carousel-indicators">
@@ -72,5 +75,17 @@
       <button>Agregar al Carrito</button>
   </div>
   
-
+<!-----Horario el cual labora la tienda------>
+<div class="horario-container">
+    <table>
+      <tr>
+        <th colspan="2">Día y Horario de Atención</th>
+      </tr>
+      <tr *ngFor="let day of daysOfWeek; let i = index">
+        <td>{{ day }}</td>
+        <td *ngIf="day === 'Domingo'">{{ schedule[i][0].isOpen ? 'Abierto' : 'No se Labora' }}</td>
+        <td *ngIf="day !== 'Domingo'">{{ hoursOfDay[0] }} - {{ hoursOfDay[hoursOfDay.length - 1] }}</td>
+      </tr>
+    </table>
+  </div>
 
