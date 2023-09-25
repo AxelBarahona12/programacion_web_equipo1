@@ -15,8 +15,8 @@
 }
 
 .product img {
-    max-width: 100%;
-    height: 10%;
+    max-width: 50%;
+    height: 20%;
 }
 
 .product h3 {
@@ -48,4 +48,17 @@
 
 .product button:hover {
     background: #0288d1;
+}
+
+/* wicho aqui estan los estilos para el carrusel*/
+#template-mo-zay-hero-carousel {
+    background-color: #f0ecec;
+}
+
+#template-mo-zay-hero-carousel .carousel-indicators {
+    list-style: none; 
+}
+
+#template-mo-zay-hero-carousel .carousel-indicators li {
+    background-color: #ccc; 
 }
