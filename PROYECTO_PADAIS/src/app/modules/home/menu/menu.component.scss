@@ -51,6 +51,11 @@
 }
 
 /* wicho aqui estan los estilos para el carrusel*/
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto asegura que la imagen se ajuste y recorte según el tamaño del contenedor */
+}
 #template-mo-zay-hero-carousel {
     background-color: #f0ecec;
 }
