@@ -1,32 +1,57 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HorarioService } from 'src/app/services/horario.service';
+import { Dia, Unicornio } from 'src/app/shared/unicornio';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss']
 })
-export class MenuComponent {
-  daysOfWeek: string[] = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'];
-  hoursOfDay: string[] = ['8:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '5:00 PM'];
+export class MenuComponent implements OnInit{
+  
   schedule: any[][] = [];
-
-  constructor() {
-    // Inicializa el horario de atención con valores predeterminados
-    for (let i = 0; i < this.daysOfWeek.length; i++) {
-      this.schedule[i] = [];
-      for (let j = 0; j < this.hoursOfDay.length; j++) {
-        this.schedule[i][j] = { isOpen: true };
-      }
+  semana: Dia[]=[
+    {
+      name:"Lunes",
+      horario: "9:00 AM a 5:00 PM"
+    },
+    {
+      name:"Martes",
+      horario: "9:00 AM a 5:00 PM"
+    },
+    {
+      name:"Miercoles",
+      horario: "9:00 AM a 5:00 PM"
+    },
+    {
+      name:"Jueves",
+      horario: "9:00 AM a 5:00 PM"
+    },
+    {
+      name:"Viernes",
+      horario: "9:00 AM a 5:00 PM"
+    },
+    {
+      name:"Sabado",
+      horario: "9:00 AM a 2:00 PM"
+    },
+    {
+      name:"Domingo",
+      horario: "No se labora"
     }
 
+  ];
+    days:Dia[]=[];
 
-    // Establece que no se trabaja los domingos
-    const domingoIndex = this.daysOfWeek.indexOf('Domingo');
-    if (domingoIndex !== -1) {
-      for (let j = 0; j < this.hoursOfDay.length; j++) {
-        this.schedule[domingoIndex][j].isOpen = false;
-      }
-    }
+  constructor(public Horario:HorarioService) {
+ 
+  }
+  ngOnInit(): void {
+    //this.Horario.NewDays(this.semana).subscribe((Obj)=>{
+   // })
+    this.Horario.getHoras().subscribe((res)=>{
+      this.days=res;
+    });
   }
 }

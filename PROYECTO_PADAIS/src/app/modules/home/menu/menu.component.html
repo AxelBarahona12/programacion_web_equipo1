@@ -49,10 +49,10 @@
       <tr>
         <th colspan="2">Día y Horario de Atención</th>
       </tr>
-      <tr *ngFor="let day of daysOfWeek; let i = index">
-        <td>{{ day }}</td>
-        <td *ngIf="day === 'Domingo'">{{ schedule[i][0].isOpen ? 'Abierto' : 'No se Labora' }}</td>
-        <td *ngIf="day !== 'Domingo'">{{ hoursOfDay[0] }} - {{ hoursOfDay[hoursOfDay.length - 1] }}</td>
+      <tr *ngFor="let day of days; let i = index">
+        <td>{{ day.name }}</td>
+        <td> {{ day.horario}}</td>
+        <td>editar</td>
       </tr>
     </table>
   </div>
