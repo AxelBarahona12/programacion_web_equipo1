@@ -6,6 +6,7 @@ import { HomeComponent } from '../home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
+import { ShoopcartComponent } from './shoopcart/shoopcart.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     HeaderComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    ShoopcartComponent
   ],
   imports: [
     CommonModule,
