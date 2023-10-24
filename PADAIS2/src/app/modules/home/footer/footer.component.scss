@@ -1,0 +1,38 @@
+#tempaltemo_footer {
+  ul.footer-icons {
+    list-style: none;
+    padding: 10px;
+    display: flex; /* Hacer que los íconos estén en línea y centrados */
+    justify-content: center; /* Centrar los íconos horizontalmente */
+    margin-bottom: 20px;
+
+    li {
+      margin-right: 20px; /* Espacio entre los íconos */
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      border: none; /* Eliminar cualquier borde */
+      border-radius: 0; /* Eliminar cualquier radio de borde (círculos) */
+    }
+  }
+
+  .bg-black {
+    background-color: #000;
+    margin-top:20px;
+    width:50px;
+    height:50px;
+  }
+
+  .text-light {
+    color: #fff;
+  }
+
+  .bg-dark{
+    position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  }
+}
