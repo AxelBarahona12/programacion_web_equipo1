@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { CarouselComponent } from '../principal/carousel/carousel.component';
 
 
 
@@ -15,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
     ContentComponent,
     FooterComponent,
     HeaderComponent,
+    CarouselComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,16 @@
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Esto asegura que la imagen se ajuste y recorte según el tamaño del contenedor */
+}
+#template-mo-zay-hero-carousel {
+  background-color: #f0ecec;
+}
+
+#template-mo-zay-hero-carousel .carousel-indicators {
+  list-style: none;
+}
+
+#template-mo-zay-hero-carousel .carousel-indicators li {
+  background-color: #ccc;
+}
