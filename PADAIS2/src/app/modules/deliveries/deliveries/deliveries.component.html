@@ -20,7 +20,15 @@
           <tbody>
             <tr *ngFor="let entrega of listaEntregas">
               <td>{{entrega.id_paquete}}</td>
-              <td [ngClass]="{'text-danger': entrega.estado === 'Pago Pendiente', 'text-warning': entrega.estado === 'En Tránsito', 'text-success': entrega.estado === 'Entregado'}">{{ entrega.estado }}</td>
+              <td [ngClass]="{
+                'text-danger': entrega.estado === 'Pago Pendiente',
+                'text-warning': entrega.estado === 'En Tránsito',
+                'text-success': entrega.estado === 'Entregado',
+                'text-orange': entrega.estado === 'Pagado'
+              }"  [style.color]="'#ff6b01'">
+                {{ entrega.estado }}
+              </td>
+              
               <td>{{ entrega.direccionEntrega }}</td>
               <td>{{ entrega.fechaCompra }}</td>
               <td>{{ entrega.fechaEntrega }}</td>

@@ -6,10 +6,17 @@ import { Injectable } from '@angular/core';
 export class DeliveriesService {
   private listaEntregas = [
     {
+      id_paquete: '0000004',
+      estado: 'Pagado',
+      direccionEntrega: 'La Colonia #15',
+      fechaCompra: '26-10-2023',
+      fechaEntrega: '02-11-2023'
+    },
+    {
       id_paquete: '0000003',
       estado: 'Pago Pendiente',
       direccionEntrega: 'Calle 26 #1',
-      fechaCompra: '27-10-2023',
+      fechaCompra: '26-10-2023',
       fechaEntrega: '02-11-2023'
     },
     {
