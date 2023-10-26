@@ -1,1 +1,30 @@
-<p>deliveries works!</p>
+<div class="container">
+    <div class="card mt-4">
+      <div class="card-header">
+        Lista de Entregas
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr>
+                <th>Numero de Paquete</th>
+                <th>Estado</th>
+                <th>Dirección de Entrega</th>
+                <th>Fecha de Compra</th>
+                <th>Fecha de Entrega</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let entrega of listaEntregas">
+                <td>{{entrega.id_paquete}}</td>
+              <td>{{ entrega.estado }}</td>
+              <td>{{ entrega.direccionEntrega }}</td>
+              <td>{{ entrega.fechaCompra }}</td>
+              <td>{{ entrega.fechaEntrega }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
