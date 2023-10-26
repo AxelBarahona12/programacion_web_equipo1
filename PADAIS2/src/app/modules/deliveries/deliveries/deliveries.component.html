@@ -1,23 +1,26 @@
+
+<script src="../../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 <div class="container">
     <div class="card mt-4">
-      <div class="card-header">
-        Lista de Entregas
+      <div class="card-header text-center">
+        <h1>Lista de Entregas</h1>
       </div>
       <div class="card-body">
         <table class="table">
-          <thead>
+        <thead>
             <tr>
-                <th>Numero de Paquete</th>
-                <th>Estado</th>
-                <th>Dirección de Entrega</th>
-                <th>Fecha de Compra</th>
-                <th>Fecha de Entrega</th>
+              <th>Numero de Paquete</th>
+              <th>Estado</th>
+              <th>Dirección de Entrega</th>
+              <th>Fecha de Compra</th>
+              <th>Fecha de Entrega</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let entrega of listaEntregas">
-                <td>{{entrega.id_paquete}}</td>
-              <td>{{ entrega.estado }}</td>
+              <td>{{entrega.id_paquete}}</td>
+              <td [ngClass]="{'text-danger': entrega.estado === 'Pago Pendiente', 'text-warning': entrega.estado === 'En Tránsito', 'text-success': entrega.estado === 'Entregado'}">{{ entrega.estado }}</td>
               <td>{{ entrega.direccionEntrega }}</td>
               <td>{{ entrega.fechaCompra }}</td>
               <td>{{ entrega.fechaEntrega }}</td>
