@@ -1,0 +1,29 @@
+<div class="row justify-content-center mt-5">
+  <div class="col-md-4">
+    <form [formGroup]="updateForm" (ngSubmit)="onUpdate()">
+      <div class="mb-3">
+        <label class="form-label">Nombre del Producto</label>
+        <input type="text" class="form-control" formControlName="product_name" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Descripción</label>
+        <input type="text" class="form-control" formControlName="description" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Precio</label>
+        <textarea class="form-control" rows="3" formControlName="price"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">cantidad</label>
+        <textarea class="form-control" rows="3" formControlName="amount"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <button type="submit" class="btn btn-success">Actualizar</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="row justify-content-center mt-5">
+  <div class="col-md-4">
+    <form [formGroup]="productsForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label">name</label>
+        <input type="text" class="form-control" formControlName="product_name" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">description</label>
+        <input type="text" class="form-control" formControlName="description" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">precio</label>
+        <textarea class="form-control" rows="3" formControlName="price"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Amount</label>
+        <input type="number" class="form-control" formControlName="amount" required>
+      </div>
+
+      <div class="mb-3">
+        <button type="submit" class="btn btn-primary">add</button>
+      </div>
+
+      <div class="mb-3">
+        <button type="submit" class="btn btn-danger" routerLink="/products-list">cancelar</button>
+      </div>
+
+
+    </form>
+  </div>
+</div>
+
