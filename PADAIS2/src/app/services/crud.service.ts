@@ -3,6 +3,7 @@ import { misproductos } from './misproductos';
 import { catchError, map } from 'rxjs/operators'; // Importa los operadores de RxJS
 import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { Product } from '../interfaces/product';
 
 @Injectable({
   providedIn: 'root'
@@ -18,10 +19,12 @@ export class CrudService {
     return this.httpClient.post(API_URL, data).pipe(catchError(this.handleError));
   }
 
-  getmisproducto() {
+  getmisproducto():Observable<Product[]> {
     let API_URL = `${this.REST_API}`;
-    return this.httpClient.get(API_URL);
+    return this.httpClient.get<Product[]>(API_URL);
+
   }
+
 
   getmisproductos(id: any): Observable<any> {
     let API_URL = `${this.REST_API}/${id}`;
@@ -32,6 +35,8 @@ export class CrudService {
       catchError(this.handleError)
     );
   }
+
+
 
   updatemisproductos(id: any, data: misproductos): Observable<any> {
     let API_URL = `${this.REST_API}/${id}`;
