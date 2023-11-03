@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ShoopcartComponent } from './shoopcart/shoopcart.component';
+import { ShoopcartComponent } from '../shoopcart/shoopcart/shoopcart.component';
 
 const routes: Routes = [
  {path: "", component: ShoopcartComponent}

@@ -45,6 +45,16 @@
     <!--Fin de NavBar-->
 
   </div>
-  </div>
 
+<div class="nabvar-cart" (click)="onToogleCart()">
+  <div class="navbar-cart-items">
+     <p>0</p>
+    </div>
+   <i class="fa-solid fa-cart-shopping" style="color: #56e3f5;"></i>
+  </div>
+</div>
 </nav>
+
+<div class="cart" [ngClass]="{ show: viewCart}">
+<app-shoopcart></app-shoopcart>
+</div>
