@@ -22,6 +22,7 @@ export class AddProductsComponent implements OnInit {
       description: [''],
       price: [''],
       amount: [''],
+      image:[''],
     });
   }
 
