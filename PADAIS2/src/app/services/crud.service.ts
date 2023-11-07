@@ -49,7 +49,6 @@ export class CrudService {
     return this.httpClient.delete(API_URL, { headers: this.httpHeaders }).pipe(catchError(this.handleError));
   }
 
-
   handleError(error: HttpErrorResponse) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {

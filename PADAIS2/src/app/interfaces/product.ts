@@ -5,5 +5,5 @@ export interface Product {
   description: string,
   price: string,
   amount: string,
-
+  image: string
 }

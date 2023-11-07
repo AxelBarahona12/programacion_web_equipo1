@@ -2,10 +2,10 @@
 <div class="Debajo">
 
     <div class="container">
-
+      <h1>Lista de productos</h1>
       <!-- <app-products-list></app-products-list> -->
           <div *ngFor="let item of products" class="product col-md-3">
-            <img src="" alt="Producto 4">
+            <img src="{{item.image}}" height="150px" width="150px" alt="Producto 4">
             <h3>{{item.product_name}}</h3>
             <p class="price">{{item.price}}</p>
             <p class="descriptio">{{item.description}}</p>
