@@ -1,9 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css);
+@import '~bootstrap/dist/css/bootstrap.css';
 
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.ng-invalid:not(form){
+  border-left:5px solid red;
+}
+
+.ng-valid:not(form){
+  border-left:5px solid green;
 }
