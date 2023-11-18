@@ -22,9 +22,7 @@ export class CrudService {
   getmisproducto():Observable<Product[]> {
     let API_URL = `${this.REST_API}`;
     return this.httpClient.get<Product[]>(API_URL);
-
   }
-
 
   getmisproductos(id: any): Observable<any> {
     let API_URL = `${this.REST_API}/${id}`;
@@ -36,17 +34,14 @@ export class CrudService {
     );
   }
 
-
-
   updatemisproductos(id: any, data: misproductos): Observable<any> {
     let API_URL = `${this.REST_API}/${id}`;
     return this.httpClient.put(API_URL, data, { headers: this.httpHeaders }).pipe(catchError(this.handleError));
   }
 
-
   deletemisproductos(id: any): Observable<any> {
     let API_URL = `${this.REST_API}/${id}`;
-    return this.httpClient.delete(API_URL, { headers: this.httpHeaders }).pipe(catchError(this.handleError));
+    return this.httpClient.delete(API_URL);
   }
 
   handleError(error: HttpErrorResponse) {
