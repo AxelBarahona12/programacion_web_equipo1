@@ -1,8 +1,8 @@
 <div class="container">
 
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">Añadir</button>
+  <button type="button" (click)="openDialog()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">Añadir</button>
 
-  <div class="modal fade" id="addProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="addProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -42,7 +42,7 @@
               </div>
 
               <div class="mb-3">
-                <button type="submit" class="btn btn-danger" routerLink="/products-list">cancelar</button>
+                <button type="submit" data-bs-dismiss="modal" class="btn btn-danger" routerLink="/products-list">cancelar</button>
               </div>
 
             </form>
@@ -50,7 +50,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">

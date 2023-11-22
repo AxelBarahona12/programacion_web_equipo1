@@ -36,6 +36,7 @@ export class ProductsListComponent implements OnInit {
   openDialog(): void {
     this.dialog.open(AddProductsComponent, {
       height: '50%',
+      width: '50%',
       disableClose: true
     })
   }
@@ -43,7 +44,7 @@ export class ProductsListComponent implements OnInit {
   delete(id: any, i: number) {
     console.log(id);
     this.crudService.deletemisproductos(id).subscribe(() => {
-      // this.products.splice(i, 1);
+      this.products.splice(i, 1);
       console.log(id);
     });
   }
@@ -57,4 +58,5 @@ export class ProductsListComponent implements OnInit {
         console.log(err);
       });
   }
+
 }
