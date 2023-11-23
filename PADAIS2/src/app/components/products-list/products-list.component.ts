@@ -33,13 +33,6 @@ export class ProductsListComponent implements OnInit {
     });
   }
 
-  openDialog(): void {
-    this.dialog.open(AddProductsComponent, {
-      height: '100%',
-      width: '40%',
-      disableClose: true
-    })
-  }
 
   delete(id: any, i: number) {
     console.log(id);
