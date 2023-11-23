@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ProductsListComponent } from 'src/app/components/products-list/products-list.component';
 import { LoginComponent } from '../start/login/login.component';
 import { RegisterComponent } from '../start/register/register.component';
+import { ShoopcartComponent } from '../shoopcart/shoopcart/shoopcart.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,8 @@ const routes: Routes = [
     {path:"start",loadChildren:()=>import("../start/start.module").then(m=>m.StartModule)},
     {path: "login", component: LoginComponent},
     {path: "register", component: RegisterComponent},
-    {path: 'products-list', component: ProductsListComponent}
+    {path: 'products-list', component: ProductsListComponent},
+    {path: 'shoopcart', component:ShoopcartComponent}
   ]
   }
 ];
