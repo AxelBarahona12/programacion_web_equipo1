@@ -39,3 +39,17 @@ th[colspan="2"] {
   background-color: #ff0000; /* Color de fondo rojo para indicar que no se trabaja */
   color: #fff; /* Texto en blanco para mayor contraste */
 }
+
+.map-container {
+  display: flex;
+  justify-content: center; // Centrar horizontalmente
+  align-items: center; // Centrar verticalmente
+  height: 100vh; // Altura del contenedor del 100% de la ventana
+}
+
+// Estilo para el iframe del mapa
+.map-iframe {
+  width: 600px; // Ancho del mapa
+  height: 450px; // Altura del mapa
+  border: 0;
+}

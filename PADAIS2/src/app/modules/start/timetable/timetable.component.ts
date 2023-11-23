@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
 
+import { Component, OnInit } from '@angular/core';
+import { ScheduleService } from 'src/app/services/schedule.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-timetable',
   templateUrl: './timetable.component.html',
   styleUrls: ['./timetable.component.scss']
 })
+
 export class TimetableComponent {
   daysOfWeek: string[] = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'];
   hoursOfDay: string[] = ['8:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '5:00 PM'];
@@ -28,3 +31,31 @@ export class TimetableComponent {
     }
   }
 }
+
+/* export class TimetableComponent implements OnInit{
+  schedules: any[] = [];
+  scheduleForm: FormGroup;
+
+  constructor(private scheduleService: ScheduleService, private fb: FormBuilder) {
+    this.scheduleForm = this.fb.group({
+      day: [''],
+      startTime: [''],
+      endTime: ['']
+    });
+  }
+
+  ngOnInit() {
+    this.scheduleService.getSchedules().subscribe((data: any[]) => {
+      this.schedules = data;
+    });
+  }
+
+  onSubmit() {
+    const scheduleData = this.scheduleForm.value;
+    this.scheduleService.createSchedule(scheduleData).subscribe(() => {
+      this.ngOnInit(); // Actualizar la lista después de agregar
+    });
+  }
+}
+
+ */
