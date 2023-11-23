@@ -6,12 +6,16 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { CarouselComponent } from './carousel/carousel.component';
+import { TimetableComponent } from './timetable/timetable.component';
 
 @NgModule({
   declarations: [
     StartComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    CarouselComponent,
+    TimetableComponent
   ],
   imports: [
     CommonModule,
