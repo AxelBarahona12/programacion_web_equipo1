@@ -1,11 +1,6 @@
-.container {
-  margin: 20px;
-}
-
 table {
   width: 1000px;
-  margin: 0 auto; // Centra la tabla
-  margin-bottom: 20px; // Separa los botones de actualizar y eliminar
+  margin-bottom: 90px; // Separa los botones de actualizar y eliminar
   font-family: sans-serif;
   font-weight: 100;
   border-collapse: collapse;
@@ -30,8 +25,8 @@ table {
 
   tbody tr:hover {
     background-color: #ffffff4d;
-    transform: scale(1.1);
-    transform-origin: 0 0;
+    // transform: scale(1.1);
+    // transform-origin: 0 0;
   }
 
   tbody td {
@@ -41,5 +36,6 @@ table {
 }
 
 button {
+  display: flex; // Alínea los botones horizontalmente
   margin-right: 10px; // Separa los botones de actualizar y eliminar
 }

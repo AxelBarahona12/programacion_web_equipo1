@@ -26,16 +26,19 @@ export class ProductsDetailComponent implements OnInit {
       description: [''],
       price: [''],
       amount: [''],
+      image:['']
     });
 
     this.crudService.getmisproductos(this.getId).subscribe(res => {
       console.log(res);
-      this.updateForm.setValue({
-        product_name: res['product_name'],
-        description: res['description'],
-        price: res['price'],
-        amount: res['amount'],
-      });
+      // this.updateForm.setValue({
+      //   product_name: res.product_name,
+      //   description: res.description,
+      //   price: res.price,
+      //   amount: res.amount,
+      //   image:res.image
+      // });
+      this.updateForm.patchValue({product_name : res.product_name});
     });
   }
 
@@ -52,4 +55,6 @@ export class ProductsDetailComponent implements OnInit {
         console.log(err);
       });
   }
+
+
 }
