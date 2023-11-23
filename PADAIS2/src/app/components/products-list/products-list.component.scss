@@ -1,0 +1,45 @@
+.container {
+  margin: 20px;
+}
+
+table {
+  width: 1000px;
+  margin: 0 auto; // Centra la tabla
+  margin-bottom: 20px; // Separa los botones de actualizar y eliminar
+  font-family: sans-serif;
+  font-weight: 100;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+  th,
+  td {
+    background-color: #ffffff33;
+    padding: 15px;
+    color: #000; // Cambia el color del texto a negro
+  }
+
+  th {
+    text-align: left;
+  }
+
+  thead th {
+    background-color: #55608f;
+    color: #fff; // Cambia el color del texto a blanco en el encabezado #
+  }
+
+  tbody tr:hover {
+    background-color: #ffffff4d;
+    transform: scale(1.1);
+    transform-origin: 0 0;
+  }
+
+  tbody td {
+    position: relative;
+    color: #000; // Cambia el color del texto a negro en la fila
+  }
+}
+
+button {
+  margin-right: 10px; // Separa los botones de actualizar y eliminar
+}

@@ -1,0 +1,41 @@
+.horario-container {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px;
+}
+
+table {
+  width: 45%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-radius: 15px; /* Aplicar bordes circulares a la tabla */
+  overflow: hidden; /* Ocultar el desbordamiento de los bordes circulares */
+}
+
+th, td {
+  padding: 10px;
+  border-radius: 15px; /* Aplicar bordes circulares a las celdas */
+}
+
+td  {
+  text-align: left;
+}
+th {
+  background-color: #00bfff;
+  color: #000000;
+
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+th[colspan="2"] {
+  border-bottom-left-radius: 15px; /* Aplicar borde circular inferior izquierdo */
+}
+
+/* Estilos para las celdas donde no se trabaja (domingo) */
+.no-trabaja {
+  background-color: #ff0000; /* Color de fondo rojo para indicar que no se trabaja */
+  color: #fff; /* Texto en blanco para mayor contraste */
+}

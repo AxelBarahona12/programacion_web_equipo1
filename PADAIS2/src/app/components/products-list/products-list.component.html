@@ -2,55 +2,61 @@
 
   <button type="button" (click)="openDialog()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProduct">Añadir</button>
 
-  <!-- <div class="modal fade" id="addProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Agregar Nuevo Producto
+  </button>
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h2 class="modal-title fs-5" id="exampleModalLabel">Nuevo Producto</h2>
+          <h5 class="modal-title fs-5" id="staticBackdropLabel">Agregar Nuevo Producto</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="col-md-4">
-          <div class="modal-body">
-            <form id="productsForm" [formGroup]="productsForm" (ngSubmit)="onSubmit()">
-              <div class="mb-3">
-                <label class="form-label">name</label>
-                <input type="text" class="form-control" formControlName="product_name" required>
-              </div>
+        <div class="modal-body">
+          <form [formGroup]="productsForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label class="form-label">Nombre del Producto</label>
+              <input type="text" class="form-control" formControlName="product_name" required>
+            </div>
 
-              <div class="mb-3">
-                <label class="form-label">description</label>
-                <input type="text" class="form-control" formControlName="description" required>
-              </div>
+            <div class="mb-3">
+              <label class="form-label">Descripción del Producto</label>
+              <textarea class="form-control" rows="3" formControlName="description"></textarea>
+            </div>
 
-              <div class="mb-3">
-                <label class="form-label">precio</label>
-                <textarea class="form-control" rows="3" formControlName="price"></textarea>
-              </div>
+            <div class="mb-3">
+              <label class="form-label">Precio del Producto</label>
+              <input type="number" class="form-control" formControlName="price" required>
+            </div>
 
-              <div class="mb-3">
-                <label class="form-label">Amount</label>
-                <input type="number" class="form-control" formControlName="amount" required>
-              </div>
+            <div class="mb-3">
+              <label class="form-label">Cantidad del Producto</label>
+              <input type="number" class="form-control" formControlName="amount" required>
+            </div>
 
-              <div class="mb-3">
-                <label class="form-label">image</label>
-                <input type="text" class="form-control" formControlName="image" required>
-              </div>
+            <div class="mb-3">
+              <label class="form-label">Imagen del Producto</label>
+              <input type="text" class="form-control" formControlName="image" required>
+            </div>
 
-              <div class="mb-3">
-                <button type="submit" class="btn btn-primary">add</button>
-              </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary">Agregar Producto</button>
+            </div>
 
-              <div class="mb-3">
-                <button type="submit" data-bs-dismiss="modal" class="btn btn-danger" routerLink="/products-list">cancelar</button>
-              </div>
+            <div class="mb-3">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+            </div>
 
-            </form>
-          </div>
+          </form>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
+
+
+
 
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
