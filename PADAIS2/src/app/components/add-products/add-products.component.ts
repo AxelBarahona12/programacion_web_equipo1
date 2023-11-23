@@ -7,7 +7,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-add-products',
   templateUrl: './add-products.component.html',
-  styleUrls: ['./add-products.component.sass']
+  styleUrls: ['./add-products.component.scss']
 })
 export class AddProductsComponent implements OnInit {
   productsForm: FormGroup;
@@ -24,7 +24,7 @@ export class AddProductsComponent implements OnInit {
       description: [''],
       price: [''],
       amount: [''],
-      image:[''],
+      image: [''],
     });
   }
 
@@ -34,12 +34,13 @@ export class AddProductsComponent implements OnInit {
   onSubmit(): any { // Cambiado a onSubmit
     this.crudService.addmisproductos(this.productsForm.value)
       .subscribe(() => {
-        console.log('Data added successfully');
+        console.log('Los datos se agregaron correctamente');
         this.dialog.close();
-  }, (err) => {
+      }, (err) => {
         console.log(err);
       });
   }
+
   cancel(){
     this.dialog.close();
 

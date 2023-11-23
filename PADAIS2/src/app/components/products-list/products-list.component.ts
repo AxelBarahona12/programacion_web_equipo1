@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
-  styleUrls: ['./products-list.component.sass']
+  styleUrls: ['./products-list.component.scss']
 })
 export class ProductsListComponent implements OnInit {
   products: any = [];
@@ -35,8 +35,8 @@ export class ProductsListComponent implements OnInit {
 
   openDialog(): void {
     this.dialog.open(AddProductsComponent, {
-      height: '50%',
-      width: '50%',
+      height: '100%',
+      width: '40%',
       disableClose: true
     })
   }

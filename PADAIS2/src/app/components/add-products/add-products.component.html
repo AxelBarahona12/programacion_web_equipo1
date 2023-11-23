@@ -1,5 +1,10 @@
 <div class="row justify-content-center mt-5">
   <div class="col-md-4">
+
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h2>Productos Nuevos</h2>
+    </div>
+
     <form [formGroup]="productsForm" (ngSubmit)="onSubmit()">
       <div class="mb-3">
         <label class="form-label">name</label>
@@ -8,7 +13,7 @@
 
       <div class="mb-3">
         <label class="form-label">description</label>
-        <input type="text" class="form-control" formControlName="description" required>
+        <textarea class="form-control" rows="3" formControlName="description"></textarea>
       </div>
 
       <div class="mb-3">
