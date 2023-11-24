@@ -2,10 +2,12 @@
   text-align: center;
   font-size: 18px;
   margin: 20px;
+  width: 100%;
+  max-width: 450px;
 }
 
 table {
-  width: 45%;
+  width: 100%;
   margin: 0 auto;
   border-collapse: collapse;
   border-radius: 15px; /* Aplicar bordes circulares a la tabla */
@@ -39,12 +41,24 @@ th[colspan="2"] {
   background-color: #ff0000; /* Color de fondo rojo para indicar que no se trabaja */
   color: #fff; /* Texto en blanco para mayor contraste */
 }
-
-.map-container {
+.contenedorMapDesp{
   display: flex;
-  justify-content: center; // Centrar horizontalmente
-  align-items: center; // Centrar verticalmente
-  height: 100vh; // Altura del contenedor del 100% de la ventana
+  margin: auto;
+  width: 100%;
+  max-width: 1050px;
+}
+.contenedorMapa{
+width: 100%;
+}
+.map-container {
+  //display: flex;
+  //justify-content: center; // Centrar horizontalmente
+  //align-items: center; // Centrar verticalmente
+  width: 100%;
+  max-width: 600px;
+  //text-align: center;
+
+  //height: 100vh; // Altura del contenedor del 100% de la ventana
 }
 
 // Estilo para el iframe del mapa
