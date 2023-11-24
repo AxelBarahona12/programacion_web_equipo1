@@ -1,51 +1,67 @@
+/* Agregar la siguiente línea al head de tu HTML para importar la fuente de Google Fonts */
+/* <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"> */
+
 .container {
   margin: 20px auto;
   text-align: center;
 }
 
 .product {
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 30px; /* Cambiar el valor para hacer los bordes ovalados */
+  background: #fff; /* Cambiar a fondo blanco */
+  border: 2px solid #000; /* Cambiar a borde negro */
+  border-radius: 20px;
   padding: 20px;
   margin: 10px;
   display: inline-block;
   width: 30%;
   height: 400px;
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: scale(1.05);
 }
 
 .product img {
-  max-width: 50%;
-  height: 58%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .product h3 {
   margin: 10px 0;
-  font-size: 18px;
+  font-size: 20px;
+  color: #000; /* Cambiar a texto negro */
+  font-family: 'Playfair Display', serif;
 }
 
 .product p {
   font-size: 14px;
   margin: 10px 0;
+  color: #333; /* Cambiar a texto gris oscuro */
 }
 
 .product .price {
   font-size: 16px;
   font-weight: bold;
-  color: #03a9f4;
+  color: #000; /* Cambiar a texto negro */
 }
 
 .product button {
-  background: #03a9f4;
-  color: #fff;
+  background: #000; /* Cambiar a fondo negro */
+  color: #fff; /* Cambiar a texto blanco */
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 10px;
+  transition: background 0.3s, transform 0.2s;
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .product button:hover {
-  background: #0288d1;
+  background: #333; /* Cambiar a fondo gris oscuro al pasar el ratón */
+  transform: scale(1.05);
 }
