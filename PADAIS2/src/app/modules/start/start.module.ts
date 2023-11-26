@@ -10,7 +10,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CarouselComponent } from './carousel/carousel.component';
 import { RecomprodComponent } from './recomprod/recomprod.component';
 import { TimetableComponent} from './timetable/timetable.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     StartComponent,
@@ -26,7 +27,8 @@ import { TimetableComponent} from './timetable/timetable.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
 
   ]
 })
