@@ -1,24 +1,24 @@
-<!--Inicio NavBar-->
+
+<!-- Inicio NavBar -->
 <nav class="navbar navbar-expand-lg navbar-blue bg-blue fixed-top">
 
   <div class="container">
     <a class="navbar-brand" href="start">
       <img src="./assets/image/logo.png" alt="Logo">
-  </a>
+    </a>
 
-    <!--Menu para pantallas pequeñas-->
+    <!-- Botón para pantallas pequeñas -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-     <!--Las opciones del menu-->
-     <div class="collapse navbar-collapse nav-underline" id="navbarNav">
+    <!-- Opciones del menú -->
+    <div class="collapse navbar-collapse nav-underline" id="navbarNav">
       <ul class="navbar-nav mx-auto">
         <hr class="text-white-50">
         <li class="nav-item">
           <a class="nav-link active text-warning" aria-current="page" href="start">Inicio</a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link text-warning" href="products">Productos</a>
         </li>
@@ -31,30 +31,28 @@
         <li class="nav-item">
           <a class="nav-link text-warning" href="shoopcart">Carrito</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="products">
+            <i class="bi bi-person"></i> {{ this.email }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="logout()">
+            <i class="bi bi-box-arrow-right"></i> Logout
+          </a>
+        </li>
+
+
       </ul>
 
-   <!--Botones para el iniciar sesion y registrar-->
-  <!--Botones para el iniciar sesion y registrar-->
-  <hr class="text-white-50 bg-warning">
-
-  <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-    <button type="button" class="btn  btn-outline-warning me-md-2" [routerLink]="'login'" >Iniciar Sesión</button>
-    <button type="button" class="btn btn-outline-warning ml-2" [routerLink]="'register'" >Registarse</button>
-
+      <!-- Botones para iniciar sesión y registrarse -->
+      <hr class="text-white-50 bg-warning">
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button type="button" class="btn btn-outline-warning me-md-2" [routerLink]="'login'">Iniciar Sesión</button>
+        <button type="button" class="btn btn-outline-warning ml-2" [routerLink]="'register'">Registrarse</button>
+      </div>
     </div>
-    <!--Fin de NavBar-->
-
+    <!-- Fin de NavBar -->
   </div>
-
-<div class="nabvar-cart" (click)="onToogleCart()">
-  <div class="navbar-cart-items">
-     <p>0</p>
-    </div>
-   <i class="fa-solid fa-cart-shopping" style="color: #56e3f5;"></i>
-  </div>
-</div>
 </nav>
-
-<div class="cart" [ngClass]="{ show: viewCart}">
-<app-shoopcart></app-shoopcart>
-</div>

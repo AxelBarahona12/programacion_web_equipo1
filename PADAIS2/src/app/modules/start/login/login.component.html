@@ -3,19 +3,39 @@
     <h1>Iniciar sesion</h1>
   </header>
 
-  <form>
+  <form (ngSubmit)= "submit()" [formGroup]= "form">
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="text" name="email" class="form-control"
-      placeholder="Enter email">
+      <input type="text" formControlName="email" name="email" class="form-control"
+      placeholder="Enter email" [ngClass]="{'is-invalid': submitted && f['email'].errors}">
 
+      <div *ngIf= "submitted && f['email'].errors" class="invalid-feedback">
+        <div *ngIf= "f['email'].errors['required']">
+           Email es requerido
+        </div>
+
+        <div *ngIf= "f['email'].errors['email']">
+          Email must be a valid email adress
+         </div>
+      </div>
+     </div>
+
+     <div class="form-group">
+      <label for="name">Password</label>
+      <input type="password" formControlName="password" name="password" class="form-control"
+      placeholder="Enter password" [ngClass]= "{'is-invalid': submitted && f['password'].errors}">
+
+      <div *ngIf= "submitted && f['password'].errors" class="invalid-feedback">
+      <div *ngIf= "f['password'].errors['required']">
+       Contraseña es requerido
+      </div>
+
+      <div *ngIf= "f['password'].errors['minlength']">
+        Contraseña must be at least 6 caracters
+      </div>
+    </div>
   </div>
 
-  <div class="form-group">
-    <label for="name">Password</label>
-    <input type="password" name="password" class="form-control"
-    placeholder="Enter password" >
-
-  </div>
+        <button class="btn btn-primary btn-sm mt-4">Login</button>
   </form>
 </div>

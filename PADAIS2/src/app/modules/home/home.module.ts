@@ -14,12 +14,16 @@ import { ShoopcartModule } from '../shoopcart/shoopcart.module';
     HomeComponent,
     ContentComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+
+
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    ShoopcartModule
+    ShoopcartModule,
+
+
   ]
 })
 export class HomeModule { }

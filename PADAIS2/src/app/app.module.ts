@@ -14,6 +14,7 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { ToastrModule } from 'ngx-toastr';
+import { StartModule } from './modules/start/start.module';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ToastrModule } from 'ngx-toastr';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
+    StartModule,
     ToastrModule.forRoot()
   ],
   providers: [],

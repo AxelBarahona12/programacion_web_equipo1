@@ -1,3 +1,4 @@
+import { StartComponent } from './../start/start/start.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
