@@ -22,7 +22,7 @@ import { StartModule } from './modules/start/start.module';
     ProductosComponent,
     AddProductsComponent,
     ProductsDetailComponent,
-    ProductsListComponent
+    ProductsListComponent,
 
   ],
   imports: [

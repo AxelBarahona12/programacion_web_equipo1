@@ -13,7 +13,8 @@ const routes: Routes = [
     children: [
     {path:"products", loadChildren:()=>import("../products/products.module").then(m=>m.ProductsModule)},
     {path:"deliveries", loadChildren:()=>import("../deliveries/deliveries.module").then(m=>m.DeliveriesModule)},
-    {path:"start",loadChildren:()=>import("../start/start.module").then(m=>m.StartModule)},
+/*     {path:"start",loadChildren:()=>import("../start/start.module").then(m=>m.StartModule)}, */
+    {path: "start", component:StartComponent},
     {path: "login", component: LoginComponent},
     {path: "register", component: RegisterComponent},
     {path: 'products-list', component: ProductsListComponent},
