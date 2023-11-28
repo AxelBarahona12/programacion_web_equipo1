@@ -1,0 +1,27 @@
+<!-- user-list.component.html -->
+
+<div class="container">
+  <h2>Lista de Usuarios</h2>
+  <table class="table table-responsive">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+
+        <!-- Agrega más columnas según tus necesidades -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users" >
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>
+          <button type="button" class="btn btn-danger" (click)="delete(user.id)">Eliminar</button>
+          <button type="button" class="btn btn-success" [routerLink]="'/edit-products/' + user.id">Editar</button>
+        </td>
+        <!-- Agrega más celdas según tus necesidades -->
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -6,8 +6,8 @@ import { ProductsListComponent } from 'src/app/components/products-list/products
 import { LoginComponent } from '../start/login/login.component';
 import { RegisterComponent } from '../start/register/register.component';
 import { ShoopcartComponent } from '../shoopcart/shoopcart/shoopcart.component';
-
-
+import { AuthGuard } from '../start/auth.guard';
+import { UsersDetailsComponent } from 'src/app/components/users-details/users-details.component';
 const routes: Routes = [
   { path: "", component: HomeComponent,
     children: [
@@ -17,8 +17,9 @@ const routes: Routes = [
     {path: "start", component:StartComponent},
     {path: "login", component: LoginComponent},
     {path: "register", component: RegisterComponent},
-    {path: 'products-list', component: ProductsListComponent},
-    {path: 'shoopcart', component:ShoopcartComponent}
+    {path: 'products-list', component: ProductsListComponent, canActivate:[AuthGuard] },
+    {path: 'shoopcart', component:ShoopcartComponent},
+    {path: 'users-details', component:UsersDetailsComponent }
   ]
   }
 ];

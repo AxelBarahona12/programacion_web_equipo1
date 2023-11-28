@@ -15,6 +15,9 @@ import { MatInputModule } from '@angular/material/input'
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { ToastrModule } from 'ngx-toastr';
 import { StartModule } from './modules/start/start.module';
+import { UsersDetailsComponent } from './components/users-details/users-details.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { EditUsersComponent } from './components/edit-users/edit-users.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,9 @@ import { StartModule } from './modules/start/start.module';
     AddProductsComponent,
     ProductsDetailComponent,
     ProductsListComponent,
+    UsersDetailsComponent,
+    AdminComponent,
+    EditUsersComponent,
 
   ],
   imports: [

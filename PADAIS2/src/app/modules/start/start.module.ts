@@ -19,7 +19,8 @@ import { ToastrModule } from 'ngx-toastr';
     LoginComponent,
     TimetableComponent,
     CarouselComponent,
-    RecomprodComponent
+    RecomprodComponent,
+    
   ],
   imports: [
     CommonModule,
