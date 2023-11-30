@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 import { ToastrService } from 'ngx-toastr';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MustMatch } from '../confirmed.validator';
+import { MustMatch } from '../../start/confirmed.validator';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',

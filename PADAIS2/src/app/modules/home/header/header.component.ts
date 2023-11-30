@@ -1,19 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
-import {jwtDecode} from 'node_modules/jwt-decode';
+import { Router } from '@angular/router';
+import { jwtDecode } from 'node_modules/jwt-decode';
+import { HeaderService } from 'src/app/services/header.service';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-
-export class HeaderComponent implements OnInit{
-  token:any;
-  userData:any;
+export class HeaderComponent implements OnInit {
+  token: any;
+  userData: any;
   email: any;
-  viewCart: Boolean=false;
+  viewCart: Boolean = false;
 
-  constructor(private router:Router){}
+  constructor(private router: Router, private headerService: HeaderService) {
+    this.headerService.siActualizarHeader().subscribe(() => {
+      this.updateEmail();
+
+
+    });
+  }
 
   updateEmail() {
     this.token = localStorage.getItem('token');
@@ -28,18 +35,15 @@ export class HeaderComponent implements OnInit{
     this.updateEmail();
     console.log(this.token);
     console.log(this.userData.email);
+
   }
 
-  logout(){
+  logout() {
+
     console.log('Logout clicked');
     localStorage.removeItem('token');
     this.updateEmail();
-    this.router.navigate(['/login']);
+    this.headerService.notificarActualización();
+    this.router.navigate(['/start']);
   }
-
-/*   onToogleCart()
-  {
-    this.viewCart = !this.viewCart
-  }
- */
 }

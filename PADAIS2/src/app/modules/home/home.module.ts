@@ -25,6 +25,7 @@ import { ShoopcartModule } from '../shoopcart/shoopcart.module';
 
 
 
+
   ]
 })
 export class HomeModule { }

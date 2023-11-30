@@ -40,7 +40,6 @@ import { EditUsersComponent } from './components/edit-users/edit-users.component
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    StartModule,
     ToastrModule.forRoot()
   ],
   providers: [],

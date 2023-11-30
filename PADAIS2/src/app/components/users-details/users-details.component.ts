@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 import {Router} from '@angular/router';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { CrudService } from 'src/app/services/crud.service';
-import { MatDialog } from '@angular/material/dialog';
 
 
 
@@ -17,7 +14,7 @@ export class UsersDetailsComponent implements OnInit {
   i!: number;
 
 
-  constructor(private dataService: DataService) {  }
+  constructor(private dataService: DataService, private router: Router) {  }
 
   ngOnInit(): void {
     this.loadUsers();
@@ -37,9 +34,14 @@ export class UsersDetailsComponent implements OnInit {
       this.dataService.deleteUser(id, i).subscribe(() => {
         this.deleteUser(i, 1);
         console.log(id);
+        this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+        this.router.onSameUrlNavigation = 'reload';
+        this.router.navigate([this.router.url]);
+
       });
+
     } else {
-   
+
     }
   }
 }

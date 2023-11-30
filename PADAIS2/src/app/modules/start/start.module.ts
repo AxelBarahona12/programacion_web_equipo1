@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StartRoutingModule } from './start-routing.module';
 import { StartComponent } from './start/start.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from '../home/register/register.component';
+import { LoginComponent } from '../home/login/login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CarouselComponent } from './carousel/carousel.component';
@@ -20,7 +20,7 @@ import { ToastrModule } from 'ngx-toastr';
     TimetableComponent,
     CarouselComponent,
     RecomprodComponent,
-    
+
   ],
   imports: [
     CommonModule,
