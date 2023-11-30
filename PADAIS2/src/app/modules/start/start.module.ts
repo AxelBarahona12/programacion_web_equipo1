@@ -12,6 +12,10 @@ import { RecomprodComponent } from './recomprod/recomprod.component';
 import { TimetableComponent} from './timetable/timetable.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { CreateTimeTableComponent } from './timetable/create-time-table/create-time-table.component';
+import { ListTimeTableComponent } from './timetable/list-time-table/list-time-table.component';
+import { LocationComponent } from './timetable/location/location.component';
+import { UpdateTimeTableComponent } from './timetable/update-time-table/update-time-table.component';
 @NgModule({
   declarations: [
     StartComponent,
@@ -20,6 +24,10 @@ import { ToastrModule } from 'ngx-toastr';
     TimetableComponent,
     CarouselComponent,
     RecomprodComponent,
+    CreateTimeTableComponent,
+    ListTimeTableComponent,
+    LocationComponent,
+    UpdateTimeTableComponent,
 
   ],
   imports: [

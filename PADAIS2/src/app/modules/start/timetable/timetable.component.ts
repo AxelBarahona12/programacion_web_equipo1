@@ -2,14 +2,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ScheduleService } from 'src/app/services/schedule.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { TimetableService } from 'src/app/Services/timetable.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-timetable',
   templateUrl: './timetable.component.html',
   styleUrls: ['./timetable.component.scss']
 })
 
-export class TimetableComponent {
-  daysOfWeek: string[] = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'];
+export class TimetableComponent
+  /*daysOfWeek: string[] = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'];
   hoursOfDay: string[] = ['8:00 AM', '10:00 AM', '11:00 AM', '12:00 PM', '5:00 PM'];
   schedule: any[][] = [];
 
@@ -59,3 +61,28 @@ export class TimetableComponent {
 }
 
  */
+
+implements OnInit{
+  //Definir un array para mostrar los horarios
+  list: any[] = [];
+
+  constructor(
+    private timeService: TimetableService,
+    private router: Router,
+  ) { }
+
+  ngOnInit(): void {
+    this.getAllTime();
+  }
+
+  //Traer todos los comentarios
+  getAllTime(){
+    this.timeService.getAll().subscribe((res:any)=>{
+      this.list = res.data;
+      console.log("sjhhksggsdhu")
+    })
+
+    console.log("sjhhaaaaaaaaaksggsdhu")
+
+  }
+}
