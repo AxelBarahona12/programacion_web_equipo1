@@ -12,7 +12,7 @@ export class CrudService {
 
   REST_API: string = 'http://127.0.0.1:8000/api/products';
   REST_API2: string = 'http://127.0.0.1:8000/api/product';
-  
+
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private httpClient: HttpClient) { }

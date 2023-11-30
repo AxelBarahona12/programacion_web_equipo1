@@ -33,26 +33,26 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="products">
+          <a *ngIf="email" class="nav-link" href="admin">
             <i class="bi bi-person"></i> {{ this.email }}
           </a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" (click)="logout()">
+          <a *ngIf="email" class="nav-link" (click)="logout()">
             <i class="bi bi-box-arrow-right"></i> Logout
           </a>
         </li>
-
-
       </ul>
 
       <!-- Botones para iniciar sesión y registrarse -->
-      <hr class="text-white-50 bg-warning">
-      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-        <button type="button" class="btn btn-outline-warning me-md-2" [routerLink]="'login'">Iniciar Sesión</button>
-        <button type="button" class="btn btn-outline-warning ml-2" [routerLink]="'register'">Registrarse</button>
+      <hr class="text-white-45 bg-warning">
+      <div *ngIf="!email" class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button *ngIf="!email" type="button" class="btn btn-outline-warning me-md-2" [routerLink]="'login'">Iniciar Sesión</button>
+        <button *ngIf="!email" type="button" class="btn btn-outline-warning ml-2" [routerLink]="'register'">Registrarse</button>
       </div>
     </div>
     <!-- Fin de NavBar -->
   </div>
 </nav>
+

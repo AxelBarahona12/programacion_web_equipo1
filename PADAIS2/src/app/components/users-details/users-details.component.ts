@@ -6,6 +6,7 @@ import { CrudService } from 'src/app/services/crud.service';
 import { MatDialog } from '@angular/material/dialog';
 
 
+
 @Component({
   selector: 'app-users-details',
   templateUrl: './users-details.component.html',
@@ -13,6 +14,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class UsersDetailsComponent implements OnInit {
   users!: any;
+  i!: number;
 
 
   constructor(private dataService: DataService) {  }
@@ -26,13 +28,18 @@ export class UsersDetailsComponent implements OnInit {
       this.users = data.data;
     });
   }
+  deleteUser(id: any, i: number) {
+    const shouldDelete = confirm('¿Estás seguro de que quieres eliminar este usuario?');
 
-  delete(id: number) {
-    if (confirm('¿Estás seguro de que quieres eliminar este usuario?')) {
-      this.dataService.deleteUser().subscribe(() => {
-        // Eliminar el usuario de la lista local
-        this.users = this.users.filter((user: any) => user.id !== id);
+    if (shouldDelete) {
+      console.log(id);
+
+      this.dataService.deleteUser(id, i).subscribe(() => {
+        this.deleteUser(i, 1);
+        console.log(id);
       });
+    } else {
+   
     }
   }
 }

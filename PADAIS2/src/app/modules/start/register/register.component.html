@@ -7,7 +7,7 @@
     <div class="form-group">
         <label for="name">Nombre</label>
         <input type="text" formControlName="name" name="name" class="form-control"
-        placeholder="Enter Name" [ngClass] ="{'is-invalid' : submitted && f['name'].errors}">
+        placeholder="Ingrese un nombre" [ngClass] ="{'is-invalid' : submitted && f['name'].errors}">
 
         <div *ngIf= "submitted && f['name'].errors" class="invalid-feedback">
           <div *ngIf= "f['name'].errors['required']">
@@ -17,25 +17,25 @@
     </div>
 
     <div class="form-group">
-      <label for="email">Email</label>
+      <label for="email">Correo electronico</label>
       <input type="text" formControlName="email" name="email" class="form-control"
-      placeholder="Enter email" [ngClass]="{'is-invalid': submitted && f['email'].errors}">
+      placeholder="Ingrese un correo" [ngClass]="{'is-invalid': submitted && f['email'].errors}">
 
       <div *ngIf= "submitted && f['email'].errors" class="invalid-feedback">
         <div *ngIf= "f['email'].errors['required']">
-           Email es requerido
+            Se requiere un correo
         </div>
 
         <div *ngIf= "f['email'].errors['email']">
-          Email must be a valid email adress
+          Ingrese una direccion de correo valida
          </div>
       </div>
      </div>
 
    <div class="form-group">
-      <label for="name">Password</label>
+      <label for="name">Contraseña</label>
       <input type="password" formControlName="password" name="password" class="form-control"
-      placeholder="Enter password" [ngClass]= "{'is-invalid': submitted && f['password'].errors}">
+      placeholder="Ingrese una contraseña" [ngClass]= "{'is-invalid': submitted && f['password'].errors}">
 
     <div *ngIf= "submitted && f['password'].errors" class="invalid-feedback">
       <div *ngIf= "f['password'].errors['required']">
@@ -43,23 +43,23 @@
       </div>
 
       <div *ngIf= "f['password'].errors['minlength']">
-        Contraseña must be at least 6 caracters
+       La contraseña debe tener minimo 6 caracteres
       </div>
     </div>
   </div>
 
   <div class="form-group">
-    <label for="name">Confirm Password</label>
+    <label for="name">Confirmar contraseña</label>
     <input type="password" formControlName="confirmPassword" name="confirmPassword" class="form-control"
-    placeholder="Enter confirm password" [ngClass]= "{'is-invalid' : submitted && f['confirmPassword'].errors}" >
+    placeholder="Confirme su contraseña" [ngClass]= "{'is-invalid' : submitted && f['confirmPassword'].errors}" >
 
     <div *ngIf= "submitted && f['confirmPassword'].errors" class="invalid-feedback">
     <div *ngIf= "f['confirmPassword'].errors['required']">
-       Confirmar contraseña es requerido
+       Requiere confirmar la contraseña
     </div>
 
       <div *ngIf= "f['confirmPassword'].errors['mustMatch']">
-        Contraseña must Match
+        La contraseña no es la misma
       </div>
     </div>
   </div>
