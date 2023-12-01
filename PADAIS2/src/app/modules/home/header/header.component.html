@@ -37,12 +37,12 @@
             <i class="bi bi-person"></i> {{ this.email }}
           </a>
         </li>
-
-        <li class="nav-item">
-          <a *ngIf="email" class="nav-link" (click)="logout()">
-            <i class="bi bi-box-arrow-right"></i> Logout
-          </a>
-        </li>
+        
+        <li>
+        <a *ngIf="email" class="nav-link" (click)="logout()">
+          <i class="bi bi-box-arrow-right"></i> Logout
+        </a>
+      </li>
       </ul>
 
       <!-- Botones para iniciar sesión y registrarse -->

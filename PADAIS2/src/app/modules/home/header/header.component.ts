@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { jwtDecode } from 'node_modules/jwt-decode';
+import { jwtDecode } from 'jwt-decode';  // Asegúrate de tener la importación correcta
+
 import { HeaderService } from 'src/app/services/header.service';
 
 @Component({
@@ -17,32 +18,35 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router, private headerService: HeaderService) {
     this.headerService.siActualizarHeader().subscribe(() => {
       this.updateEmail();
-
-
     });
   }
 
   updateEmail() {
     this.token = localStorage.getItem('token');
-    this.userData = jwtDecode(this.token);
-    this.email = this.userData.email;
+    if (this.token) {
+      try {
+        this.userData = jwtDecode(this.token);
+        this.email = this.userData.email;
+      } catch (error) {
+        console.error('Error decoding token:', error);
+        this.email = undefined;
+      }
+    } else {
+      this.email = undefined;
+    }
   }
 
   ngOnInit(): void {
-    this.token = localStorage.getItem('token');
-    this.userData = jwtDecode(this.token);
-    this.email = this.userData.email;
     this.updateEmail();
     console.log(this.token);
-    console.log(this.userData.email);
-
+    console.log(this.email);
   }
 
   logout() {
-
     console.log('Logout clicked');
     localStorage.removeItem('token');
     this.updateEmail();
+    console.log('Se actualizó');
     this.headerService.notificarActualización();
     this.router.navigate(['/start']);
   }

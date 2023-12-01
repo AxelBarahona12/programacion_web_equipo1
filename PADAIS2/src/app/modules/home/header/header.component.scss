@@ -2,26 +2,7 @@
   background-color: #000;
   color: #fff;
 }
-.navbar-cart {
-  position: relative;
-  margin-right: 1rem;
-  &-items {
-    position: relative;
-    left: 8.5px; /* Aumenta este valor para mover el carrito hacia la derecha */
-    top: -0.8rem;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    background-color: red;
-    height: 20px;
-    width: 20px;
 
-    p {
-      font-size: 0.8rem;
-      text-align: center;
-    }
-  }
-}
 
 .nav-link {
   color: #fff !important;
@@ -52,27 +33,5 @@
   color: #07ffde !important;
 }
 
-.cart{
-  display: none;
-}
 
-.show{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index:1;
-  position: absolute;
-  background-color: rgb(255, 255, 255);
-  border-radius: 0.5rem;
-  border: 1px solid #cc1414;
-  right:100px;
-  top: 83px;
-  min-width:60%
-    app-cart{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-}
 
