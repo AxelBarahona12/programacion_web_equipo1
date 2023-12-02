@@ -10,6 +10,8 @@ import { UsersDetailsComponent } from './components/users-details/users-details.
 import { CreateTimeTableComponent } from './modules/start/timetable/create-time-table/create-time-table.component';
 import { ListTimeTableComponent } from './modules/start/timetable/list-time-table/list-time-table.component';
 import { UpdateTimeTableComponent } from './modules/start/timetable/update-time-table/update-time-table.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
   {path:"", loadChildren: ()=> import("./modules/home/home.module").then(m=>m.HomeModule)},
@@ -19,7 +21,8 @@ const routes: Routes = [
   {path:'time-add', component:CreateTimeTableComponent},
   {path:'time-list', component:ListTimeTableComponent},
   {path:'update-time/:id', component:UpdateTimeTableComponent},
-  {path:'localUpd/:id', component:LocationComponent}
+  {path:'localUpd/:id', component:LocationComponent},
+
 /*   {path: 'products-list', component: ProductsListComponent, canActivate:[AuthGuard]}, */
 
   //{path:"", pathMatch: 'fail', redirectTo:'add-products'},

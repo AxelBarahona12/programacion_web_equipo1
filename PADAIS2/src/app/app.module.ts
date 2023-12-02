@@ -18,6 +18,7 @@ import { StartModule } from './modules/start/start.module';
 import { UsersDetailsComponent } from './components/users-details/users-details.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { EditUsersComponent } from './components/edit-users/edit-users.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { EditUsersComponent } from './components/edit-users/edit-users.component
     UsersDetailsComponent,
     AdminComponent,
     EditUsersComponent,
+    UserComponent,
 
   ],
   imports: [

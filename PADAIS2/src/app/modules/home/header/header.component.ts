@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { jwtDecode } from 'jwt-decode';  // Asegúrate de tener la importación correcta
+import { jwtDecode } from 'jwt-decode';
 
 import { HeaderService } from 'src/app/services/header.service';
 

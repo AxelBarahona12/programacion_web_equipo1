@@ -14,7 +14,6 @@ export class LoginComponent implements OnInit {
   form!: FormGroup;
   submitted = false;
   data: any;
-  token: any;
 
   constructor(
     private dataService: DataService,
@@ -48,15 +47,20 @@ export class LoginComponent implements OnInit {
 
     this.dataService.login(this.form.value).subscribe((res) => {
       this.data = res;
+      console.log(res);
+
+      this.dataService.handleLoginResponse(this.data);
 
       if (this.data.status === 1) {
-        this.token = this.data.data.token;
-        localStorage.setItem('token', this.token);
-
+        const role = this.dataService.getRoleFromStorage(); //role que se obtiene del data.service
+        if (role === 'admin') {
+          this.router.navigate(['admin']);
+        } else {
+          this.router.navigate(['user']);
+        }
 
         this.headerService.notificarActualización();
 
-        this.router.navigate(['/start']);
         this.toastr.success(
           JSON.stringify(this.data.message),
           JSON.stringify(this.data.code),
