@@ -27,7 +27,7 @@ const routes: Routes = [
     {path: 'shoopcart', component:ShoopcartComponent},
     {path: 'users-details', component:UsersDetailsComponent, canActivate:[AuthGuard]},
     {path: 'admin', component:AdminComponent, canActivate:[AuthGuard]},
-    { path: 'user', component: UserComponent },
+    { path: 'user', component: UserComponent},
     { path: 'adm-register', component:AdmRegisterComponent, canActivate:[AuthGuard]},
     { path: 'adm-update/:id', component:AdmUpdateUsersComponent, canActivate:[AuthGuard]},
     { path: 'userdata', component:UserdataComponent}

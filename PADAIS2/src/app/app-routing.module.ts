@@ -18,10 +18,10 @@ const routes: Routes = [
   {path:"product-list", component:ProductsListComponent, canActivate:[AuthGuard]},
   {path:"add-products", component:AddProductsComponent, canActivate:[AuthGuard]},
   {path:'edit-products/:id', component:ProductsDetailComponent, canActivate:[AuthGuard]},
-  {path:'time-add', component:CreateTimeTableComponent},
-  {path:'time-list', component:ListTimeTableComponent},
-  {path:'update-time/:id', component:UpdateTimeTableComponent},
-  {path:'localUpd/:id', component:LocationComponent},
+  {path:'time-add', component:CreateTimeTableComponent, canActivate:[AuthGuard]},
+  {path:'time-list', component:ListTimeTableComponent, canActivate:[AuthGuard]},
+  {path:'update-time/:id', component:UpdateTimeTableComponent,canActivate:[AuthGuard]},
+  {path:'localUpd/:id', component:LocationComponent, canActivate:[AuthGuard]},
   {path:'edit-products/:id', component:ProductsDetailComponent, canActivate:[AuthGuard]},
 
 
