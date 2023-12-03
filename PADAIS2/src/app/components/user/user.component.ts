@@ -1,10 +1,36 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit} from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss']
 })
-export class UserComponent {
+export class UserComponent  implements OnInit {
+  currentUser: any;
 
+  constructor(private dataService: DataService) {}
+
+  ngOnInit() {
+    this.loadCurrentUser();
+  }
+
+  loadCurrentUser() {
+    const userId = localStorage.getItem('user_id');
+    console.log('UserId from localStorage:', userId);
+
+    if (userId) {
+      const userIdNumber: number = +userId;
+      console.log('Converted UserId to number:', userIdNumber);
+
+      if (!isNaN(userIdNumber)) {
+        this.dataService.getUserById(userIdNumber).subscribe((res) => {
+          console.log('Response from getUserById:', res);
+          this.currentUser = res.data; // Ajusta esto según la estructura de tu respuesta del servidor
+          console.log('Current User:', this.currentUser);
+        });
+      } else {
+        console.error('Error al convertir userId a número');
+      }
+    }
+  }
 }

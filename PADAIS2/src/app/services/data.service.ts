@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, catchError } from 'rxjs';
+import { EMPTY, Observable, catchError } from 'rxjs';
 
 
 @Injectable({
@@ -36,16 +36,21 @@ export class DataService {
     return this.http.put(`${this.apiUrl}/api/admUpdateUsers/${userId}`, data).pipe(
       catchError((error) => {
         console.error('Error en la solicitud de actualización de usuario', error);
-        throw error; // Puedes devolver un valor predeterminado aquí si es necesario
+        throw error;
       })
     );
+  }
+
+  userUpdate(userId: number, newName: string): Observable<any> {
+    const updateData = { name: newName };
+    return this.http.put(`${this.apiUrl}/api/userUpdate/${userId}`, updateData);
   }
 
   getUserById(userId: number): Observable<any> {
     return this.http.get(`${this.apiUrl}/api/getUserById/${userId}`).pipe(
       catchError((error) => {
         console.error('Error en la solicitud para obtener datos del usuario por ID', error);
-        throw error; // Puedes devolver un valor predeterminado aquí si es necesario
+        throw error; 
       })
     );
   }
@@ -55,16 +60,22 @@ export class DataService {
       const token = response.data.token;
 
       const claims = JSON.parse(atob(token.split('.')[1]));
-
       const role = claims.role || null;
+      const userId = claims.user_id || null;
 
       localStorage.setItem('token', token);
       localStorage.setItem('role', role);
+      localStorage.setItem('user_id', userId);
     }
   }
+
+
+
 
   getRoleFromStorage(): string | null {
     return localStorage.getItem('role');
   }
+
+
 
 }

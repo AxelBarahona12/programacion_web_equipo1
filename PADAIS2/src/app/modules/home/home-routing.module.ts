@@ -12,6 +12,7 @@ import { AdminComponent } from 'src/app/components/admin/admin.component';
 import { UserComponent } from 'src/app/components/user/user.component';
 import { AdmRegisterComponent } from 'src/app/components/adm-register/adm-register.component';
 import { AdmUpdateUsersComponent } from 'src/app/components/adm-update-users/adm-update-users.component';
+import { UserdataComponent } from 'src/app/components/userdata/userdata.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent,
@@ -29,7 +30,7 @@ const routes: Routes = [
     { path: 'user', component: UserComponent },
     { path: 'adm-register', component:AdmRegisterComponent, canActivate:[AuthGuard]},
     { path: 'adm-update/:id', component:AdmUpdateUsersComponent, canActivate:[AuthGuard]},
-
+    { path: 'userdata', component:UserdataComponent}
   ]
   }
 ];

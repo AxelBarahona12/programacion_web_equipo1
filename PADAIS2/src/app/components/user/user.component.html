@@ -1,13 +1,26 @@
 <!-- Contenido principal -->
 <div class="container mt-4">
+
   <!-- Sección de Usuarios -->
   <section id="usuario">
     <h2>Perfil de usuario</h2>
     <p>Opciones de usuario</p>
     <div class="enlaces-horizontal">
       <a href="users-details">Lista de usuarios</a>
+    </div>
+  </section>
 
-
+  <!-- Sección de Detalles del Usuario -->
+  <section>
+    <div class="userData" *ngIf="currentUser">
+      <h2>Detalles del Usuario</h2>
+      <ul>
+        <li><strong>ID:</strong> {{ currentUser.id }}</li>
+        <li><strong>Nombre:</strong> {{ currentUser.name }}</li>
+        <li><strong>Email:</strong> {{ currentUser.email }}</li>
+        <li><strong>Rol:</strong> {{ currentUser.role }}</li>
+        <!-- Agrega otros campos según sea necesario -->
+      </ul>
     </div>
   </section>
 
@@ -26,6 +39,5 @@
     </div>
 
   </section>
-
 
 </div>

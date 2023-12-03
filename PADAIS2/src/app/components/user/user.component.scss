@@ -1,0 +1,45 @@
+/* Estilos generales */
+.container {
+  // Agrega estilos generales para el contenedor
+}
+
+.mt-4 {
+  margin-top: 4px; // Agrega estilos para la clase mt-4
+}
+
+/* Estilos para la Sección de Usuarios */
+#usuario {
+  // Agrega estilos específicos para la sección de usuarios
+}
+
+.enlaces-horizontal {
+  // Agrega estilos para los enlaces horizontales
+  a {
+    // Agrega estilos para los enlaces dentro de la sección
+  }
+}
+
+/* Estilos para la Sección de Detalles del Usuario */
+section {
+  // Agrega estilos generales para las secciones
+}
+
+/* Estilos para la Sección de Detalles del Usuario (actualizado) */
+.userdata>{
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Estilos para la Sección de Productos */
+#carrito {
+  // Agrega estilos específicos para la sección de carrito
+}
