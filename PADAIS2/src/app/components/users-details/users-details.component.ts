@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 import {Router} from '@angular/router';
+import { Location } from '@angular/common';
+
 
 
 
@@ -14,7 +16,7 @@ export class UsersDetailsComponent implements OnInit {
   i!: number;
 
 
-  constructor(private dataService: DataService, private router: Router) {  }
+  constructor(private dataService: DataService, private router: Router, private location: Location) {  }
 
   ngOnInit(): void {
     this.loadUsers();
@@ -43,6 +45,14 @@ export class UsersDetailsComponent implements OnInit {
     } else {
 
     }
+  }
+
+  editUser(id: any) {
+    this.router.navigate(['/adm-update/' + id]);
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }
 

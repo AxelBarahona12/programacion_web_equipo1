@@ -32,6 +32,21 @@
       </div>
      </div>
 
+     <div class="form-group">
+      <label for="role">Rol</label>
+      <select formControlName="role" name="role" class="form-control" [ngClass]="{'is-invalid': submitted && f['role'].errors}">
+        <option value="user">Usuario</option>
+        <option value="admin">Administrador</option>
+      </select>
+
+      <div *ngIf="submitted && f['role'].errors" class="invalid-feedback">
+        <div *ngIf="f['role'].errors['required']">
+          El rol es requerido
+        </div>
+      </div>
+    </div>
+
+
    <div class="form-group">
       <label for="name">Contraseña</label>
       <input type="password" formControlName="password" name="password" class="form-control"
@@ -64,8 +79,9 @@
     </div>
   </div>
 
-    <button type="submit" class="btn btn-primary mt-4">Registrarse</button>
+    <button type="submit" class="btn btn-primary mt-4">Crear usuario</button>
   </form>
+
   <button class="btn btn-primary mt-4" (click)="goBack()">Volver</button>
 </div>
 

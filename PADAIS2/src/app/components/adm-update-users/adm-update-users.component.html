@@ -1,0 +1,52 @@
+<div class="container mt-4">
+  <header class="bg-dark text-white p-2 mb-2 text-center">
+    <h1>Actualización de Usuario</h1>
+  </header>
+
+  <form (ngSubmit)="submit()" [formGroup]="form">
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input type="text" formControlName="name" class="form-control" placeholder="Ingrese un nombre"
+             [ngClass]="{'is-invalid': submitted && f['name'].errors}">
+      <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+        <div *ngIf="f['name'].errors['required']">
+          Nombre es requerido
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input type="text" formControlName="email" class="form-control" placeholder="Ingrese un correo"
+             [ngClass]="{'is-invalid': submitted && f['email'].errors}">
+      <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+        <div *ngIf="f['email'].errors['required']">
+          Se requiere un correo
+        </div>
+        <div *ngIf="f['email'].errors['email']">
+          Ingrese una dirección de correo válida
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="role">Rol</label>
+      <select formControlName="role" class="form-control" [ngClass]="{'is-invalid': submitted && f['role'].errors}">
+        <option value="user">Usuario</option>
+        <option value="admin">Administrador</option>
+      </select>
+      <div *ngIf="submitted && f['role'].errors" class="invalid-feedback">
+        <div *ngIf="f['role']errors['required']">
+          El rol es requerido
+        </div>
+      </div>
+    </div>
+
+    <!-- Agrega más campos según sea necesario -->
+
+    <button type="submit" class="btn btn-primary mt-4">Actualizar Usuario</button>
+
+
+  </form>
+  <button class="btn btn-primary mt-4" (click)="goBack()">Volver</button>
+</div>

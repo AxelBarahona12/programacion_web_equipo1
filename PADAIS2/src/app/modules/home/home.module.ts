@@ -6,6 +6,7 @@ import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ShoopcartModule } from '../shoopcart/shoopcart.module';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -22,6 +23,7 @@ import { ShoopcartModule } from '../shoopcart/shoopcart.module';
     CommonModule,
     HomeRoutingModule,
     ShoopcartModule,
+    ToastrModule.forRoot(),
 
 
 

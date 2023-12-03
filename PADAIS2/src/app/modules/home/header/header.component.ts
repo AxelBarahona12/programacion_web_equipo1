@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   token: any;
   userData: any;
   email: any;
+  role: any;
   viewCart: Boolean = false;
 
   constructor(private router: Router, private headerService: HeaderService) {
@@ -27,19 +28,32 @@ export class HeaderComponent implements OnInit {
       try {
         this.userData = jwtDecode(this.token);
         this.email = this.userData.email;
+        this.role = this.userData.role;
       } catch (error) {
         console.error('Error decoding token:', error);
         this.email = undefined;
+        this.role = undefined;
       }
     } else {
       this.email = undefined;
+      this.role= undefined;
     }
   }
+
+  routeUser(): string{
+    
+  if (this.role === 'admin') {
+    return '/admin';
+  } else {
+    return '/user';
+  }
+}
 
   ngOnInit(): void {
     this.updateEmail();
     console.log(this.token);
     console.log(this.email);
+
   }
 
   logout() {

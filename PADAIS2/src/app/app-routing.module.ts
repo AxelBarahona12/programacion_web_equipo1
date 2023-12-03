@@ -22,6 +22,8 @@ const routes: Routes = [
   {path:'time-list', component:ListTimeTableComponent},
   {path:'update-time/:id', component:UpdateTimeTableComponent},
   {path:'localUpd/:id', component:LocationComponent},
+  {path:'edit-products/:id', component:ProductsDetailComponent, canActivate:[AuthGuard]},
+
 
 /*   {path: 'products-list', component: ProductsListComponent, canActivate:[AuthGuard]}, */
 

@@ -10,6 +10,8 @@ import { AuthGuard } from '../start/auth.guard';
 import { UsersDetailsComponent } from 'src/app/components/users-details/users-details.component';
 import { AdminComponent } from 'src/app/components/admin/admin.component';
 import { UserComponent } from 'src/app/components/user/user.component';
+import { AdmRegisterComponent } from 'src/app/components/adm-register/adm-register.component';
+import { AdmUpdateUsersComponent } from 'src/app/components/adm-update-users/adm-update-users.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent,
@@ -25,6 +27,9 @@ const routes: Routes = [
     {path: 'users-details', component:UsersDetailsComponent, canActivate:[AuthGuard]},
     {path: 'admin', component:AdminComponent, canActivate:[AuthGuard]},
     { path: 'user', component: UserComponent },
+    { path: 'adm-register', component:AdmRegisterComponent, canActivate:[AuthGuard]},
+    { path: 'adm-update/:id', component:AdmUpdateUsersComponent, canActivate:[AuthGuard]},
+
   ]
   }
 ];

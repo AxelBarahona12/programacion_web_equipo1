@@ -1,15 +1,17 @@
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 import { ToastrService } from 'ngx-toastr';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MustMatch } from '../../start/confirmed.validator';
+import { MustMatch } from '../../modules/start/confirmed.validator';
+import { Location } from '@angular/common';
+
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  selector: 'app-adm-register',
+  templateUrl: './adm-register.component.html',
+  styleUrls: ['./adm-register.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class AdmRegisterComponent {
+
   form!: FormGroup;
   submitted = false;
   data:any;
@@ -25,6 +27,7 @@ export class RegisterComponent implements OnInit {
         name: [null, Validators.required],
         email: ['', [Validators.required, Validators.email]],
         password: ['', [Validators.required, Validators.minLength(6)]],
+        role: ['',[Validators.required]],
         confirmPassword: ['', Validators.required]
       }, {
         validator: MustMatch('password', 'confirmPassword')
@@ -47,9 +50,9 @@ export class RegisterComponent implements OnInit {
       return;
     }
 
-    this.dataService.registerUser(this.form.value).subscribe(res => {
+    this.dataService.admRegister(this.form.value).subscribe(res => {
       this.data = res;
-      //console.log(res);
+
       if (this.data.status === 1){
         this.toastr.success(JSON.stringify(this.data.message), JSON.stringify(this.data.code),{
           timeOut:2000,
@@ -66,10 +69,14 @@ export class RegisterComponent implements OnInit {
       this.form.get('email')?.reset();
       this.form.get('password')?.reset();
       this.form.get('confirmPassword')?.reset();
+      this.form.get('role',)?.reset();
+
     });
   }
 
-  goBack(){
+  goBack(): void {
     this.location.back();
   }
 }
+
+

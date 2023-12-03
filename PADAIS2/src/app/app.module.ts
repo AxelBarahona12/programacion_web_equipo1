@@ -19,6 +19,9 @@ import { UsersDetailsComponent } from './components/users-details/users-details.
 import { AdminComponent } from './components/admin/admin.component';
 import { EditUsersComponent } from './components/edit-users/edit-users.component';
 import { UserComponent } from './components/user/user.component';
+import { AdmRegisterComponent } from './components/adm-register/adm-register.component';
+import { AdmUpdateUsersComponent } from './components/adm-update-users/adm-update-users.component';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +34,8 @@ import { UserComponent } from './components/user/user.component';
     AdminComponent,
     EditUsersComponent,
     UserComponent,
+    AdmRegisterComponent,
+    AdmUpdateUsersComponent,
 
   ],
   imports: [
