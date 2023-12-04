@@ -15,11 +15,8 @@ export class RegisterComponent implements OnInit {
   data:any;
 
   constructor(private formBuilder: FormBuilder, private dataService: DataService,
-    private toastr: ToastrService, private location: Location){
-
-   }
-
-
+    private toastr: ToastrService, private location: Location){}
+    
     createForm(){
       this.form = this.formBuilder.group({
         name: [null, Validators.required],

@@ -16,14 +16,8 @@ export class UserdataComponent {
   userId: any;
 
   constructor(
-    private formBuilder: FormBuilder,
-    private dataService: DataService,
-    private toastr: ToastrService,
-    private router: Router,
-    private route: ActivatedRoute,
-    private location: Location
-  ) {}
-
+    private formBuilder: FormBuilder, private dataService: DataService, private toastr: ToastrService,
+    private router: Router, private route: ActivatedRoute, private location: Location) {}
 
 
   ngOnInit(): void {
@@ -54,7 +48,6 @@ export class UserdataComponent {
       }
     }
   }
-
 
   get f() {
     return this.form.controls;

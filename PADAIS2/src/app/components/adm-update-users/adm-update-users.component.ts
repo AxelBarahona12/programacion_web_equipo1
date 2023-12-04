@@ -16,15 +16,8 @@ export class AdmUpdateUsersComponent implements OnInit {
   userId: any;
 
   constructor(
-    private formBuilder: FormBuilder,
-    private dataService: DataService,
-    private toastr: ToastrService,
-    private router: Router,
-    private route: ActivatedRoute,
-    private location: Location
-  ) {}
-
-
+    private formBuilder: FormBuilder, private dataService: DataService, private toastr: ToastrService,
+    private router: Router, private route: ActivatedRoute, private location: Location) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -45,9 +38,9 @@ export class AdmUpdateUsersComponent implements OnInit {
       const userIdNumber: number = +this.userId;  // Intenta convertir a número
 
       if (!isNaN(userIdNumber)) {
-        // Ahora userIdNumber es un número válido, puedes usarlo
+
         this.dataService.getUserById(userIdNumber).subscribe((res) => {
-          const userData = res.data; // Ajusta esto según la estructura de tu respuesta del servidor
+          const userData = res.data; 
           this.form.patchValue(userData);
         });
       } else {

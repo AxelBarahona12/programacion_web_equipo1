@@ -1,6 +1,19 @@
-<!-- Contenido principal -->
 <div class="container mt-4">
-  <!-- Sección de Usuarios -->
+  <section>
+    <div class="Usuario" class="mt-5" *ngIf="currentUser">
+      <h2>Detalles del Usuario</h2>
+      <ul>
+        <li><strong>Nombre:</strong> {{ currentUser.name }}</li>
+        <li><strong>Email:</strong> {{ currentUser.email }}</li>
+        <li><strong>Rol:</strong> {{ currentUser.role }}</li>
+      </ul>
+      <div class="enlaces-horizontal">
+      <a href="userdata">Actualizar datos</a>
+      </div>
+    </div>
+  </section>
+
+
   <section id="usuarios">
     <h2>Usuarios</h2>
     <p>Administracion de usuarios</p>
@@ -14,12 +27,11 @@
 
   </section>
 
-  <!-- Sección de Productos -->
+
   <section id="productos" class="mt-5">
     <h2>Productos</h2>
     <p>Administracion de productos</p>
 
-    <!-- Enlaces horizontales para redirigir a otras páginas -->
     <div class="enlaces-horizontal">
       <a href="products-list">Lista de productos</a>
     </div>

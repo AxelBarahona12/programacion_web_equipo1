@@ -3,9 +3,6 @@ import { DataService } from 'src/app/services/data.service';
 import {Router} from '@angular/router';
 import { Location } from '@angular/common';
 
-
-
-
 @Component({
   selector: 'app-users-details',
   templateUrl: './users-details.component.html',

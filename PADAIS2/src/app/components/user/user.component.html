@@ -1,25 +1,22 @@
-<!-- Contenido principal -->
 <div class="container mt-4">
-  <!-- Sección de Detalles del Usuario -->
   <section>
-    <div class="userData" *ngIf="currentUser">
+    <div class="Usuario" class="mt-5" *ngIf="currentUser">
       <h2>Detalles del Usuario</h2>
       <ul>
         <li><strong>Nombre:</strong> {{ currentUser.name }}</li>
         <li><strong>Email:</strong> {{ currentUser.email }}</li>
         <li><strong>Rol:</strong> {{ currentUser.role }}</li>
-
       </ul>
+      <div class="enlaces-horizontal">
       <a href="userdata">Actualizar datos</a>
+      </div>
     </div>
   </section>
 
-  <!-- Sección de Productos -->
   <section id="carrito" class="mt-5">
     <h2>Carrito de compras</h2>
     <p>Lista de carrito</p>
 
-    <!-- Enlaces horizontales para redirigir a otras páginas -->
     <div class="enlaces-horizontal">
       <a href="products-list">Lista de productos</a>
     </div>
@@ -29,5 +26,4 @@
     </div>
 
   </section>
-
 </div>

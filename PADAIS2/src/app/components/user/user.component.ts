@@ -14,6 +14,7 @@ export class UserComponent  implements OnInit {
     this.loadCurrentUser();
   }
 
+    //Cargar usuario que ha iniciado sesion
   loadCurrentUser() {
     const userId = localStorage.getItem('user_id');
     console.log('UserId from localStorage:', userId);
@@ -25,7 +26,7 @@ export class UserComponent  implements OnInit {
       if (!isNaN(userIdNumber)) {
         this.dataService.getUserById(userIdNumber).subscribe((res) => {
           console.log('Response from getUserById:', res);
-          this.currentUser = res.data; // Ajusta esto según la estructura de tu respuesta del servidor
+          this.currentUser = res.data;
           console.log('Current User:', this.currentUser);
         });
       } else {

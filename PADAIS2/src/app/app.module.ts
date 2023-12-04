@@ -17,7 +17,6 @@ import { ToastrModule } from 'ngx-toastr';
 import { StartModule } from './modules/start/start.module';
 import { UsersDetailsComponent } from './components/users-details/users-details.component';
 import { AdminComponent } from './components/admin/admin.component';
-import { EditUsersComponent } from './components/edit-users/edit-users.component';
 import { UserComponent } from './components/user/user.component';
 import { AdmRegisterComponent } from './components/adm-register/adm-register.component';
 import { AdmUpdateUsersComponent } from './components/adm-update-users/adm-update-users.component';
@@ -33,7 +32,6 @@ import { UserdataComponent } from './components/userdata/userdata.component';
     ProductsListComponent,
     UsersDetailsComponent,
     AdminComponent,
-    EditUsersComponent,
     UserComponent,
     AdmRegisterComponent,
     AdmUpdateUsersComponent,

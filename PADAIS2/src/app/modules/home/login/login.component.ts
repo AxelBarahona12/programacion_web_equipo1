@@ -16,12 +16,8 @@ export class LoginComponent implements OnInit {
   data: any;
 
   constructor(
-    private dataService: DataService,
-    private toastr: ToastrService,
-    private formBuilder: FormBuilder,
-    private router: Router,
-    private headerService: HeaderService
-  ) {}
+    private dataService: DataService, private toastr: ToastrService, private formBuilder: FormBuilder,
+    private router: Router, private headerService: HeaderService) {}
 
   loginForm() {
     this.form = this.formBuilder.group({
