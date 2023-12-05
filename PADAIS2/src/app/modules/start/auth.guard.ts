@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
-import { DataService } from 'src/app/services/data.service'; // Asegúrate de tener la ruta correcta
+import { DataService } from 'src/app/services/data.service';
 
 @Injectable({
   providedIn: 'root'

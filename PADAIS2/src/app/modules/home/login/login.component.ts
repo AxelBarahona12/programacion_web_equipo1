@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
         if (role === 'admin') {
           this.router.navigate(['admin']);
         } else {
-          this.router.navigate(['user']);
+          this.router.navigate(['start']);
         }
 
         this.headerService.notificarActualización();
