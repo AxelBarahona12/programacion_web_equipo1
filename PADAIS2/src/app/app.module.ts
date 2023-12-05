@@ -21,6 +21,8 @@ import { UserComponent } from './components/user/user.component';
 import { AdmRegisterComponent } from './components/adm-register/adm-register.component';
 import { AdmUpdateUsersComponent } from './components/adm-update-users/adm-update-users.component';
 import { UserdataComponent } from './components/userdata/userdata.component';
+import { CrearProductoComponent } from './components/crear-producto/crear-producto.component';
+import { ListarProductosComponent } from './components/listar-productos/listar-productos.component';
 
 
 @NgModule({
@@ -36,6 +38,8 @@ import { UserdataComponent } from './components/userdata/userdata.component';
     AdmRegisterComponent,
     AdmUpdateUsersComponent,
     UserdataComponent,
+    CrearProductoComponent,
+    ListarProductosComponent
 
   ],
   imports: [
