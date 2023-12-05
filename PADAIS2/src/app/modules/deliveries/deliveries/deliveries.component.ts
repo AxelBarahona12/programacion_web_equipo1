@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DeliveriesService } from './deliveries.service';
+import { ToastrService } from 'ngx-toastr';
+import { Producto } from 'src/app/models/producto';
+import { ProductoService } from 'src/app/services/producto.service';
 
 @Component({
   selector: 'app-deliveries',
@@ -7,11 +9,30 @@ import { DeliveriesService } from './deliveries.service';
   styleUrls: ['./deliveries.component.scss']
 })
 export class DeliveriesComponent implements OnInit {
-  listaEntregas: any[] = [];
+  listProductos: Producto[]= [];
+  constructor(private _productoService: ProductoService,
+                private toastr: ToastrService){}
 
-  constructor(private deliveriesService: DeliveriesService) {}
-
-  ngOnInit() {
-    this.listaEntregas = this.deliveriesService.getListaEntregas();
+  ngOnInit(): void{
+    this.obtenerProductos();
   }
+
+  obtenerProductos(){
+    this._productoService.getProductos().subscribe(data =>{
+      console.log(data);
+      this.listProductos = data;
+    }, error => {
+      console.log(error);
+    })
+  }
+
+  eliminarProducto(id: any){
+    this._productoService.eliminarProducto(id).subscribe(data => {
+       this.toastr.error('el producto fue eliminado','producto eliminado');
+       this.obtenerProductos();
+    }, error => {
+      console.log(error);
+    });
+  }
+
 }

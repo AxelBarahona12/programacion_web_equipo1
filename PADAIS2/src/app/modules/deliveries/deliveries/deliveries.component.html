@@ -1,41 +1,31 @@
-
-<script src="../../../../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-<div class="container">
-    <div class="card mt-4">
-      <div class="card-header text-center">
-        <h1>Lista de Entregas</h1>
+<div class="container mt-5" id="cart1">
+  <div class="row" >
+          <div class="card">
+              <div class="card-body text-center" >
+                  <span class="titulo">LISTA DE ENTREGAS</span>
+                  <table *ngIf="listProductos.length > 0" class="table table-striped mt-3">
+                      <thead>
+                        <tr>
+                          <th scope="col">Articulos</th>
+                          <th scope="col">Direccion</th>
+                          <th scope="col">Fecha de Compra</th>
+                          <th scope="col">Estado</th>
+                          <th scope="col">Fecha de Entrega</th>
+                          <th scope="col"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let producto of listProductos">
+                          <td>{{producto.articulos}}</td>
+                          <td>{{producto.direccion}}</td>
+                          <td>{{producto.fechaCompra}}</td>
+                          <td>{{producto.estado}}</td>
+                          <td>{{producto.fechaEntrega}}</td>
+                         
+                        </tr>
+                      </tbody>
+                    </table>
+              </div>
+          </div>
       </div>
-      <div class="card-body">
-        <table class="table">
-        <thead>
-            <tr>
-              <th>Numero de Paquete</th>
-              <th>Estado</th>
-              <th>Dirección de Entrega</th>
-              <th>Fecha de Compra</th>
-              <th>Fecha de Entrega</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let entrega of listaEntregas">
-              <td>{{entrega.id_paquete}}</td>
-              <td [ngClass]="{
-                'text-danger': entrega.estado === 'Pago Pendiente',
-                'text-warning': entrega.estado === 'En Tránsito',
-                'text-success': entrega.estado === 'Entregado',
-                'text-orange': entrega.estado === 'Pagado'
-              }"  [style.color]="'#ff6b01'">
-                {{ entrega.estado }}
-              </td>
-              
-              <td>{{ entrega.direccionEntrega }}</td>
-              <td>{{ entrega.fechaCompra }}</td>
-              <td>{{ entrega.fechaEntrega }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
   </div>
-  

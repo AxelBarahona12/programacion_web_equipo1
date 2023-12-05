@@ -28,6 +28,7 @@ const routes: Routes = [
   {path:'edit-products/:id', component:ProductsDetailComponent, canActivate:[AuthGuard]},
   {path: 'crear-producto', component: CrearProductoComponent},
   {path: 'editar-producto/:id', component: CrearProductoComponent},
+  {path: 'listar-productos', component: ListarProductosComponent},
   
 
 
