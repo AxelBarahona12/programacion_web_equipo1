@@ -12,6 +12,9 @@ import { ListTimeTableComponent } from './modules/start/timetable/list-time-tabl
 import { UpdateTimeTableComponent } from './modules/start/timetable/update-time-table/update-time-table.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { UserComponent } from './components/user/user.component';
+import { ListarProductosComponent } from './components/listar-productos/listar-productos.component';
+import { CrearProductoComponent } from './components/crear-producto/crear-producto.component';
+
 
 const routes: Routes = [
   {path:"", loadChildren: ()=> import("./modules/home/home.module").then(m=>m.HomeModule)},
@@ -23,6 +26,9 @@ const routes: Routes = [
   {path:'update-time/:id', component:UpdateTimeTableComponent,canActivate:[AuthGuard]},
   {path:'localUpd/:id', component:LocationComponent, canActivate:[AuthGuard]},
   {path:'edit-products/:id', component:ProductsDetailComponent, canActivate:[AuthGuard]},
+  {path: 'crear-producto', component: CrearProductoComponent},
+  {path: 'editar-producto/:id', component: CrearProductoComponent},
+  
 
 
 /*   {path: 'products-list', component: ProductsListComponent, canActivate:[AuthGuard]}, */

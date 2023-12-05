@@ -23,6 +23,7 @@ import { AdmUpdateUsersComponent } from './components/adm-update-users/adm-updat
 import { UserdataComponent } from './components/userdata/userdata.component';
 import { CrearProductoComponent } from './components/crear-producto/crear-producto.component';
 import { ListarProductosComponent } from './components/listar-productos/listar-productos.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ListarProductosComponent } from './components/listar-productos/listar-p
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
